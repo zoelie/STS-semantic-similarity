@@ -4,7 +4,7 @@
 1. Zoe Lie - zoelie
 2. Sonia Mannan - smannan
 3. Poojitha Vaddey - poojithavaddey
-4. Dylan Zhang - ddyy 814
+4. Dylan Zhang - ddyy814
 
 ## Description
 We propose evaluating sentence similarity based on thousands of sentence pairings from various news articles, 
