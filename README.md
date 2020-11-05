@@ -13,7 +13,7 @@ in the underlying semantics of paired snippets of text. The STS benchmark tasks 
 deep natural language understanding problem and provide a standard setup for training, development, and testing on three selected genres.
 
 We select the STS benchmark because the SemEval (Semantic Evaluation) shared task has been updated dataset annually since 2012 in order to stimulate research in semantic 
-analysis and encourage the develpment of creative new methods to the modeling sentence level.
+analysis and encourage the development of creative new methods to the modeling sentence level.
 
 Sentence similarity is used in a range of Natural Language Processing tasks - when you type in a search and Google is able to recommend similar searches, when you ask 
 Siri a question it can return a variety of results based on similar requests, or correcting grammatically incorrect sentences. These use cases demonstrate natural 
