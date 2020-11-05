@@ -19,6 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="9179aa31-16fe-4ca6-97af-091d71302b2f" />
   <component name="ProjectFrameBounds">
     <option name="x" value="35" />
     <option name="y" value="23" />
@@ -105,6 +106,7 @@
       <workItem from="1604545485539" duration="804000" />
       <workItem from="1604552107498" duration="2209000" />
       <workItem from="1604555271011" duration="20000" />
+      <workItem from="1604555583311" duration="589000" />
     </task>
     <servers />
   </component>
