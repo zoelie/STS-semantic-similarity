@@ -27,8 +27,8 @@ STS Benchimark: http://ixa2.si.ehu.es/stswiki/index.php/STSbenchmark
 
 We consider use re-sampling tecniques to balance the training datset.
 
-1. oversampling (draw more sample without substitution) from underrepresented class
-2. Undersampling (draw less sample with/without substitution) from overrepresente3d class
+1. Oversampling (draw more sample without substitution) from underrepresented class
+2. Undersampling (draw less sample with/without substitution) from overrepresented class
 3. Over-sampling followed by under-sampling (SMOTE + Tomek links or SMOTE + ENN)
 4. Ensemble classifier using samplers internally (such as Easy Ensemble classifier)
 
@@ -36,11 +36,11 @@ We consider use re-sampling tecniques to balance the training datset.
 In the process of natural language processing, we often encounter scenarios where we need to find similar sentences or find approximate expressions of sentences.
 For the problem of distance calculation, we will take a look at how to use Python to calculate sentence similarity.
 
-We propose various pre-preocessing techniques and distance measures to evaluage how similar two sentences are. A distance measure is a mathematical formula specifying
-how similar two sentences are. Distance measures therefore require text data to be pre-preocessed before it can be evaluated and the pre-preocessing technique used can
+We propose various pre-preocessing techniques and distance measures to evaluate how similar two sentences are. A distance measure is a mathematical formula specifying
+how similar two sentences are. Distance measures therefore require text data to be pre-preocessed before it can be evaluated and the pre-processing technique used can
 heavily influence the similarity evaluation of a sentence pair.
 
-We propose the following pre-precessing techniques:
+We propose the following pre-processing techniques:
 
 1. TF-IDF score: Each word in the sentence gets a score weighted by its frequency and importance to the sentence. Each sentence will be represented by a vector of TF-IDF scores.
 2. Bag of Words: Each sentence is represented by list of 1's and 0's where as 1 indicates the sentence contains a specific word. We can experiment with both words and
