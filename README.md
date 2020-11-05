@@ -71,3 +71,7 @@ RMSE or Root mean squared error is an average measure of the magnitude of error 
 accurate pre-processing technique.
 
 ## Cite
+1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
+2. How to fix imbalanced dataset? https://towardsdatascience.com/having-an-imbalanced-dataset-here-is-how-you-can-solve-it-1640568947eb
+3. TF-IDF: https://monkeylearn.com/blog/what-is-tf-idf/
+4. Dataset Hub: https://github.com/brmson/dataset-sts
