@@ -62,13 +62,33 @@ used to evaluate a Bag of Words Model.
 3. Cosine Similarity: Measures the cosine of the angle between two vectors. The similar the angle, the larger the consine similarity is, and the more similar two documents are.
 This measurement is good for documents that can be different sizes. This measure can be used to evaluate TF-IDF and embedding vectors.
 
-## Meausre success in thi project
+## Meausre success in this project
 
 The STS dataset is manually annotated by humans who score each sentence pair from 0 - 5 based on how similar they are. To evaluate we can scale each of our distance
 measures between 0 - 5 and compare the distance measure we calculated to the annoated similarity based on RMSE for each pre-processing technique.
 
 RMSE or Root mean squared error is an average measure of the magnitude of error from calculated similarities to actual ones. A lower RMSE would indicate a more 
 accurate pre-processing technique.
+
+## Preliminary Analysis
+
+There are 5,749 training sentence pairs and 1,379 testing sentence pairs for a total 7,128 sentence pair with an 80/20 train-test split. Each sentence pair was rated manually from 0-5 on how similar they were. These similarity scores are evenly distributed throughout train and test, meaning there is not on imbalance between really similar or disimilar sentence pairs:
+
+![Score Distributions in Training Dataset](preliminary_analysis_charts/similarity_score_distribution_train.png)
+
+The sentence pairs were gathered from news articles and in terms of total vocabulary size, there were 114,346 words in the training set, with 18,348 of them unique. After accounting for case and removing common stop words such as a, and, the, etc.. the vocabulary size was 16,315 words.
+
+Most common words included those such as man, woman, dog, playing, and white:
+
+[common words bar graph]
+
+In terms of word length the average word was about 7 characters long, with the shortest word at 1 character and the largest at 48 characters. The 90th percentile word length was 10.
+
+[long word bar graph]
+
+In terms of sentence length the average sentence was 10 words long, with the minimum at 2 words, and the longest at 56 words. The 90th percentile sentence length was 18 words.
+
+[long sentence bar graph]
 
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
