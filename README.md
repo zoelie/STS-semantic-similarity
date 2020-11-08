@@ -80,15 +80,15 @@ The sentence pairs were gathered from news articles and in terms of total vocabu
 
 Most common words included those such as man, woman, dog, playing, and white:
 
-[common words bar graph]
+![Common Words in Training Dataset](preliminary_analysis_charts/common_words_train.png)
 
 In terms of word length the average word was about 7 characters long, with the shortest word at 1 character and the largest at 48 characters. The 90th percentile word length was 10.
 
-[long word bar graph]
+![Word Length in Training Dataset](preliminary_analysis_charts/long_words_train.png)
 
 In terms of sentence length the average sentence was 10 words long, with the minimum at 2 words, and the longest at 56 words. The 90th percentile sentence length was 18 words.
 
-[long sentence bar graph]
+![Sentence Length in Training Dataset](preliminary_analysis_charts/long_sentences_train.png)
 
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
