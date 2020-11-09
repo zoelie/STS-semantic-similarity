@@ -91,12 +91,19 @@ In terms of sentence length the average sentence was 10 words long, with the min
 ![Sentence Length in Training Dataset](preliminary_analysis_charts/long_sentences_train.png)
 
 Most counted sentences such as in Sentence_1(column) in traning dataset 
+
 ![Basic Analysis of Training Dataset](preliminary_analysis_charts/training_dataset_basic_analysis.png)
+
 ![Most Counted in Training Dataset](preliminary_analysis_charts/training_dataset_most_counted.png)
+
 According to the basic analysis of the training dataset, the frequent number is 16 in Sentence_1 (column). After computing, obtaining the most counted sentence in Sentence_1 and plot the chart with pie. Each sentence only represents a percentage of the result with the top 5 counted instead of a percentage of all training data sets.
+
 Most counted sentences such as in Sentence_1(column) in testing dataset 
+
 ![Basic Analysis of Testing Dataset](preliminary_analysis_charts/testing_dataset_basic_analysis.png)
+
 ![Most Counted in Testing Dataset](preliminary_analysis_charts/testing_dataset_most_counted.png)
+
 According to the basic analysis of the testing dataset, the frequent number is 9 in Sentence_1 (column). After computing, obtaining the most counted sentence in Sentence_1 and plot the chart with pie. Each sentence only represents a percentage of the result with the top 5 counted instead of a percentage of all testing data sets.
 
 ## Cite
