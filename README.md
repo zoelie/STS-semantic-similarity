@@ -72,7 +72,7 @@ accurate pre-processing technique.
 
 ## Preliminary Analysis
 
-There are 5,749 training sentence pairs and 1,379 testing sentence pairs for a total 7,128 sentence pair with an 80/20 train-test split. Each sentence pair was rated manually from 0-5 on how similar they were. These similarity scores are evenly distributed throughout train and test, meaning there is not on imbalance between really similar or disimilar sentence pairs:
+There are 5,749 training sentence pairs and 1,379 testing sentence pairs for a total 7,128 sentence pair with an 80/20 train-test split. Each sentence pair was rated manually from 0-5 on how similar they were. These similarity scores are evenly slightly skewed towrds sentence score 3.0 or "somewhat similar" sentences but are otherwise evenly distributed.
 
 ![Score Distributions in Training Dataset](preliminary_analysis_charts/similarity_score_distribution_train.png)
 
