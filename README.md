@@ -113,6 +113,40 @@ Here are the 10 most common sentences in the training and testing datasets visua
 
 ![Top 10 most common sentences in sentence2 (test)](preliminary_analysis_charts/10mostcommon_s2_test.png)
 
+Upon further analysis of the similarity scores in the training and testing datasets, the following statistics were found:
+
+Statistics for similarity scores in training dataset
+```
+count    5749.000000
+mean        2.700999
+std         1.464398
+min         0.000000
+25%         1.500000
+50%         3.000000
+75%         3.800000
+max         5.000000
+```
+
+Statistics for similarity scores in testing dataset
+```count    1379.000000
+mean        2.607917
+std         1.525517
+min         0.000000
+25%         1.315000
+50%         2.800000
+75%         3.800000
+max         5.000000
+```
+The respective statistics of the mean and standard deviation for the training and testing dataset are approximately the same.
+
+Here are 5 of the most and least similar sentences of the training and testing datasets, as sorted by similarity score:
+
+![5 most and least similar sentences in training dataset](preliminary_analysis_charts/sortedsimilarity_train.png)
+
+![5 most and least similar sentences in testing dataset](preliminary_analysis_charts/sortedsimilarity_test.png)
+
+After viewing these figures, it is clear how the similarity score is generated. Sentences that ultimately mean the same thing and have very similar words are rated with a similarity score of 5. On the other hand, sentences that mean different things and have very different words are rated with a similarity score of 0.
+
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
 2. How to fix imbalanced dataset? https://towardsdatascience.com/having-an-imbalanced-dataset-here-is-how-you-can-solve-it-1640568947eb
