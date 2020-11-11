@@ -21,7 +21,7 @@ language processing has huge potential to change how well we communicate online,
 
 
 ## Dataset
-STS Benchimark: http://ixa2.si.ehu.es/stswiki/index.php/STSbenchmark
+STS Benchmark: http://ixa2.si.ehu.es/stswiki/index.php/STSbenchmark
 
 ## Balance dataset before training
 
@@ -50,11 +50,10 @@ N-length vector of weights.
 4. Sentence embeddings: A similar method to word embeddings but weights are learned based on sentence similarity, not word.
 
 And the following distance measure:
-1. Edit Distance(Levenshtein): The edit distance algorithm refers to the minimum number of edit operations required to convert two strings from one to the other.
-The greater the distance between them, the more different they are. The permitted edting operations inclue replacing one character with another, inserting a character
-, and deleting a character. This method does not require any pre-processing.
+1. Edit Distance (Levenshtein): The edit distance algorithm refers to the minimum number of edit operations required to convert two strings from one to the other.
+The greater the distance between them, the more different they are. The permitted edting operations inclue replacing one character with another, inserting a character, and deleting a character. This method does not require any pre-processing.
 
-2. Jaccard index(Jaccard) - The Jaccard index is used to compare the similarities and differences between a limited sample dataset. The larger the Jaccard index coefficient
+2. Jaccard index (Jaccard) - The Jaccard index is used to compare the similarities and differences between a limited sample dataset. The larger the Jaccard index coefficient
 value, the higher the sample similarity. The calculaiton method of the Jaccard index is straightforward. It is the value obtained by dividing the intersection
 of two sample by the union. When the two samples are the same, the result is 1, and when the two samples are completely different, the result is 0. This method can be
 used to evaluate a Bag of Words Model.
@@ -64,21 +63,19 @@ This measurement is good for documents that can be different sizes. This measure
 
 ## Meausre success in this project
 
-The STS dataset is manually annotated by humans who score each sentence pair from 0 - 5 based on how similar they are. To evaluate we can scale each of our distance
-measures between 0 - 5 and compare the distance measure we calculated to the annoated similarity based on RMSE for each pre-processing technique.
+The STS dataset is manually annotated by humans who score each sentence pair from 0 - 5 based on how similar they are. To evaluate we can scale each of our distance measures between 0 - 5 and compare the distance measure we calculated to the annoated similarity based on RMSE for each pre-processing technique.
 
-RMSE or Root mean squared error is an average measure of the magnitude of error from calculated similarities to actual ones. A lower RMSE would indicate a more 
-accurate pre-processing technique.
+RMSE or Root mean squared error is an average measure of the magnitude of error from calculated similarities to actual ones. A lower RMSE would indicate a more accurate pre-processing technique.
 
 ## Preliminary Analysis
 
-There are 5,749 training sentence pairs and 1,379 testing sentence pairs for a total 7,128 sentence pair with an 80/20 train-test split. Each sentence pair was rated manually from 0-5 on how similar they were. These similarity scores are evenly slightly skewed towrds sentence score 3.0 or "somewhat similar" sentences but are otherwise evenly distributed.
+There are 5,749 training sentence pairs and 1,379 testing sentence pairs for a total 7,128 sentence pairs with train-test split of 80:20. Each sentence pair was rated manually with a score from 0-5 based on how similar they were. These similarity scores are evenly slightly skewed towards a score of 3.0 or "somewhat similar" sentences but are otherwise evenly distributed.
 
 ![Score Distributions in Training Dataset](preliminary_analysis_charts/similarity_score_distribution_train.png)
 
 The sentence pairs were gathered from news articles and in terms of total vocabulary size, there were 114,346 words in the training set, with 18,348 of them unique. After accounting for case and removing common stop words such as a, and, the, etc.. the vocabulary size was 16,315 words.
 
-Most common words included those such as man, woman, dog, playing, and white:
+The most common words included those such as man, woman, dog, playing, and white:
 
 ![Common Words in Training Dataset](preliminary_analysis_charts/common_words_train.png)
 
@@ -105,6 +102,16 @@ Most counted sentences such as in Sentence_1(column) in testing dataset
 ![Most Counted in Testing Dataset](preliminary_analysis_charts/testing_dataset_most_counted.png)
 
 According to the basic analysis of the testing dataset, the frequent number is 9 in Sentence_1 (column). After computing, obtaining the most counted sentence in Sentence_1 and plot the chart with pie. Each sentence only represents a percentage of the result with the top 5 counted instead of a percentage of all testing data sets.
+
+Here are the 10 most common sentences in the training and testing datasets visualized as bar charts.
+
+![Top 10 most common sentences in sentence1 (train)](preliminary_analysis_charts/10mostcommon_s1_train.png)
+
+![Top 10 most common sentences in sentence2 (train)](preliminary_analysis_charts/10mostcommon_s2_train.png)
+
+![Top 10 most common sentences in sentence1 (test)](preliminary_analysis_charts/10mostcommon_s1_test.png)
+
+![Top 10 most common sentences in sentence2 (test)](preliminary_analysis_charts/10mostcommon_s2_test.png)
 
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
