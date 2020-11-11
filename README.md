@@ -147,6 +147,24 @@ Here are 5 of the most and least similar sentences of the training and testing d
 
 After viewing these figures, it is clear how the similarity score is generated. Sentences that ultimately mean the same thing and have very similar words are rated with a similarity score of 5. On the other hand, sentences that mean different things and have very different words are rated with a similarity score of 0.
 
+Here are some figures that show sentences with similarity scores of 1-4 to further demonstrate how similarity score is defined:
+
+Sentences with similarity score of 1
+
+![Sentences with similarity score of 1](preliminary_analysis_charts/sentences_sim1.png)
+
+Sentences with similarity score of 2
+
+![Sentences with similarity score of 2](preliminary_analysis_charts/sentences_sim2.png)
+
+Sentences with similarity score of 3
+
+![Sentences with similarity score of 3](preliminary_analysis_charts/sentences_sim3.png)
+
+Sentences with similarity score of 4
+
+![Sentences with similarity score of 4](preliminary_analysis_charts/sentences_sim4.png)
+
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
 2. How to fix imbalanced dataset? https://towardsdatascience.com/having-an-imbalanced-dataset-here-is-how-you-can-solve-it-1640568947eb
