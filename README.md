@@ -44,7 +44,7 @@ We propose the following pre-processing techniques:
 
 1. TF-IDF score: Each word in the sentence gets a score weighted by its frequency and importance to the sentence. Each sentence will be represented by a vector of TF-IDF scores.
 2. Bag of Words: Each sentence is represented by list of 1's and 0's where as 1 indicates the sentence contains a specific word. We can experiment with both words and
-N-germs (N-length substrings in the sentence).
+N-grams (N-length substrings in the sentence).
 3. Word embeddings: Use a neural network to weight each word based on their similarities and context within the sentence. Each sentence is represented by a compressed 
 N-length vector of weights.
 4. Sentence embeddings: A similar method to word embeddings but weights are learned based on sentence similarity, not word.
@@ -164,6 +164,12 @@ Sentences with similarity score of 3
 Sentences with similarity score of 4
 
 ![Sentences with similarity score of 4](preliminary_analysis_charts/sentences_sim4.png)
+
+Based on our preliminary analysis we have narrowed our potential methods down to the following:
+
+1. Calculate the cosine similarity between word/sentence embeddings for a given sentence pair and compare it to the human-labeled similarity to determine how well the embeddings capture similarity.
+2. Calculate the cosine similarity between TF-IDF vectors for a given sentence pair and compare it to the human-labeled similarity to determine how well TF-IDF captures similarity.
+
 
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
