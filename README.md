@@ -67,6 +67,20 @@ The STS dataset is manually annotated by humans who score each sentence pair fro
 
 RMSE or Root mean squared error is an average measure of the magnitude of error from calculated similarities to actual ones. A lower RMSE would indicate a more accurate pre-processing technique.
 
+## Statistical Analysis:
+We have performed some statistical analysis of the similarity score and below are the five number summary of the similarity score values: 
+
+count    5708.000000
+mean        2.698560
+std         1.466428
+min         0.000000
+25%         1.500000
+50%         3.000000
+75%         3.800000
+max         5.000000
+
+We also observed that there are multiple records with same sentences in the dataset. One of the reasons for having the same sentence in the reference field(sen1) is that, we are comparing the same sentence with certain variations of the sentence to check for similarity. 
+
 ## Preliminary Analysis
 
 There are 5,749 training sentence pairs and 1,379 testing sentence pairs for a total 7,128 sentence pairs with train-test split of 80:20. Each sentence pair was rated manually with a score from 0-5 based on how similar they were. These similarity scores are evenly slightly skewed towards a score of 3.0 or "somewhat similar" sentences but are otherwise evenly distributed.
@@ -170,6 +184,48 @@ Based on our preliminary analysis we have narrowed our potential methods down to
 1. Calculate the cosine similarity between word/sentence embeddings for a given sentence pair and compare it to the human-labeled similarity to determine how well the embeddings capture similarity.
 2. Calculate the cosine similarity between TF-IDF vectors for a given sentence pair and compare it to the human-labeled similarity to determine how well TF-IDF captures similarity.
 
+## Data validation:
+We have performed the analysis to check whether we have any null or NAs in any of the columns in the dataset. We found that sen2 column had 3 null values. Since it is the text field that has null value, we could not replace them with any of the missing values replacement strategies. Hence, we have dropped the records having the null values in the column sen2
+We have performed a validation check to see if the similarity scores fall between 0 and 5 and verified that none of the similarity score values are outside of the 0 to 5 boundaries.
+
+## Data Cleaning: 
+Below are the steps we have performed in the order to preprocess and clean the sentences for further analysis
+1.	As a first step, we have expanded the contractions in the dataset by using the pycontractions  library
+2.	We have corrected the spellings in the sentences using the speller function from autocorrect library
+3.	We have segmented the words in the sentences using the segmenter function from ekphrasis library
+4.	We have written a custom function to include all the special characters that we might encounter. We used this custom function to replace all the special characters in the data
+5.	We have used the stopwords function in the NLTK library to strip the stop words from the sentences in the dataset
+6.	We have used the word tokenizer function in NLTK library to create tokens of the sentences
+Now our dataset is ready for performing some visualization. 
+
+## Visualizations after data cleanup: 
+Below is the histogram showing the distribution of similarity scores: 
+
+![Plot for similarity-frequency for training data] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/similarity-frequency-plot.png)
+
+We can notice that the maximum number of sentences are in the range of 3 to 4 while the lowest being in the range 4 to 5
+Below is the table displaying the correlation between the sentences and similarity scores: 
+
+![Sentences-similarity correlation chart] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/sentence-similarity-correlation.png)
+
+We could clearly notice that there is a strong correlation between the number of words in both the sentences and a very weak correlation between the similarity score and the word count in the sentence. These results show that our assumptions about the data holds (similarity depends on the sentences not on the word count)
+Below are the box plots showing the variation of word count in sentences with respect to the similarity score: 
+
+![Plot showing the variation of word count in sentences with respect to the similarity score] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/similarity-numofwords-sen1.png)
+
+![Plot showing the variation of word count in sentences with respect to the similarity score] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/similarity-numofwords-sen2.png)
+
+From the above box plots, we could notice that the distributions are quite similar for sentence1 and sentence2. Also we could observe that there are more number of words in the sentences where the similarity score is between 3 and 4.
+
+Out of curiosity, we wanted to see what the most common words are appearing in the dataset. Are these common words same between both the sentences? We can find out from the below word clouds
+
+for sentence1:
+![Word cloud for sentence1] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/word_cloud_sen1.png)
+
+for sentence2:
+![Word cloud for sentence2] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/word_cloud_sen2.png)
+ 
+ We could see that the most common words in both the sentences are not quite the same. This makes the metric calculation for similarity score more interesting. 
 
 ## Cite
 1. Imbalanced-learn: https://github.com/scikit-learn-contrib/imbalanced-learn
