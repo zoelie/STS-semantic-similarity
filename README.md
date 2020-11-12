@@ -61,7 +61,7 @@ used to evaluate a Bag of Words Model.
 3. Cosine Similarity: Measures the cosine of the angle between two vectors. The similar the angle, the larger the consine similarity is, and the more similar two documents are.
 This measurement is good for documents that can be different sizes. This measure can be used to evaluate TF-IDF and embedding vectors.
 
-## Meausre success in this project
+## Measure success in this project
 
 The STS dataset is manually annotated by humans who score each sentence pair from 0 - 5 based on how similar they are. To evaluate we can scale each of our distance measures between 0 - 5 and compare the distance measure we calculated to the annoated similarity based on RMSE for each pre-processing technique.
 
