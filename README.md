@@ -201,29 +201,31 @@ Now our dataset is ready for performing some visualization.
 ## Visualizations after data cleanup: 
 Below is the histogram showing the distribution of similarity scores: 
 
-![Plot for similarity-frequency for training data] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/similarity-frequency-plot.png)
+![Plot for similarity-frequency for training data](preliminary_analysis_charts/similarity-frequency-plot.png)
 
 We can notice that the maximum number of sentences are in the range of 3 to 4 while the lowest being in the range 4 to 5
 Below is the table displaying the correlation between the sentences and similarity scores: 
 
-![Sentences-similarity correlation chart] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/sentence-similarity-correlation.png)
+![Sentences-similarity correlation chart](preliminary_analysis_charts/sentence-similarity-correlation.png)
 
 We could clearly notice that there is a strong correlation between the number of words in both the sentences and a very weak correlation between the similarity score and the word count in the sentence. These results show that our assumptions about the data holds (similarity depends on the sentences not on the word count)
 Below are the box plots showing the variation of word count in sentences with respect to the similarity score: 
 
-![Plot showing the variation of word count in sentences with respect to the similarity score] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/similarity-numofwords-sen1.png)
+![Plot showing the variation of word count in sentences with respect to the similarity score](preliminary_analysis_charts/similarity-numofwords-sen1.png)
 
-![Plot showing the variation of word count in sentences with respect to the similarity score] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/similarity-numofwords-sen2.png)
+![Plot showing the variation of word count in sentences with respect to the similarity score](preliminary_analysis_charts/similarity-numofwords-sen2.png)
 
 From the above box plots, we could notice that the distributions are quite similar for sentence1 and sentence2. Also we could observe that there are more number of words in the sentences where the similarity score is between 3 and 4.
 
 Out of curiosity, we wanted to see what the most common words are appearing in the dataset. Are these common words same between both the sentences? We can find out from the below word clouds
 
 for sentence1:
-![Word cloud for sentence1] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/word_cloud_sen1.png)
+
+![Word cloud for sentence1](preliminary_analysis_charts/word_cloud_sen1.png)
 
 for sentence2:
-![Word cloud for sentence2] (https://github.com/zoelie/STS-semantic-similarity/blob/main/preliminary_analysis_charts/word_cloud_sen2.png)
+
+![Word cloud for sentence2](preliminary_analysis_charts/word_cloud_sen2.png)
  
  We could see that the most common words in both the sentences are not quite the same. This makes the metric calculation for similarity score more interesting. 
 
