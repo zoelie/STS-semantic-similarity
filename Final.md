@@ -19,5 +19,5 @@
 
 
 ## Citation
-Sentence Transformers: https://pypi.org/project/sentence-transformers/
-BERT: https://keras.io/examples/nlp/semantic_similarity_with_bert/
+1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
+2. BERT: https://keras.io/examples/nlp/semantic_similarity_with_bert/
