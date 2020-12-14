@@ -131,6 +131,8 @@ We were analyzing a number of the most frequent words by using NTLK this time. O
 
 ![STRUCTURE](dylan-zhang-sentence-embedding/word_frequency.png)
 
+![STRUCTURE](dylan-zhang-sentence-embedding/word_frequency1.png)
+
 
 
 ## Comparisons:
