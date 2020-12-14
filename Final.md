@@ -32,6 +32,10 @@ From this we discovered the headlines clustered into common news topics such as:
 
 ### BERT
 
+BERT is not too new in terms of model structure and can achieve good results, mainly due to the robust feature extractor Transformer and the two self-supervised language models, which is the beginning of ImageNet in the field of NLP. Use a small number of specialized field forecasts to fine-tune and thus achieve objective results.
+
+
+
 ### Roberta
 
 ### Universal Sentence Encoders
@@ -120,3 +124,4 @@ over a wide range).
 4. Pearsons Correlation: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 5. CBOW and Skipgram Diagrams: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
 6. Universal Sentence Encoder: https://arxiv.org/pdf/1803.11175.pdf
+7. SentenceTransformer Pretrained Models: https://docs.google.com/spreadsheets/d/14QplCdTCDwEmTqrn1LH4yrbKvdogK4oQvYO1K1aPR5M/edit#gid=0
