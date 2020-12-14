@@ -32,6 +32,8 @@ From this we discovered the headlines clustered into common news topics such as:
 
 ### BERT
 
+The part of DistilBert's code is taken from Facebook XLM code, and part of the code is taken from Google AI BERT's Hugging Face PyTorch version. This code is available in the NLP library for Hugging Face, and NLP library also contains training and fine-tuned versions of DistilBert and its reproduction code.
+
 BERT is not too new in terms of model structure and can achieve good results, mainly due to the robust feature extractor Transformer and the two self-supervised language models, which is the beginning of ImageNet in the field of NLP. Use a small number of specialized field forecasts to fine-tune and thus achieve objective results.
 
 In this work, we denote the number of layers (i.e., Transformer blocks) as L, the size of hidden as H, and the number of self-attention heads as A. In all cases, the size of the feed-forward/filter is set to 4H, i.e., 3072 if H = 768. The paper reports results for two model sizes.
@@ -68,6 +70,9 @@ As shown in the table below, DistilBERT does not perform badly with 1/2 and 1/3 
 
 ![COMPARISON](dylan-zhang-sentence-embedding/comparison.png)
 
+From the results in the table above, it can be seen that DistilBERT is 60% faster and smaller than BERT, and DistilBERT is 120% faster and much smaller than ELMo+BiLSTM.
+
+To further test the speed-up/size trade-off of DistilBERT, we decided to use the DistilBERT model on the STS-B development set as part of the project.
 
 ### Roberta
 
