@@ -71,5 +71,5 @@ over a wide range).
 1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
 2. BERT: https://keras.io/examples/nlp/semantic_similarity_with_bert/
 3. InferSent: https://github.com/facebookresearch/InferSent
-4 Cosine Similarity: https://en.wikipedia.org/wiki/Cosine_similarity#:~:text=In%20the%20case%20of%20information,be%20greater%20than%2090%C2%B0.
-5 Pearsons Correlation: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+4. Cosine Similarity: https://en.wikipedia.org/wiki/Cosine_similarity#:~:text=In%20the%20case%20of%20information,be%20greater%20than%2090%C2%B0
+5. Pearsons Correlation: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
