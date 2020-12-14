@@ -167,3 +167,4 @@ over a wide range).
 7. SentenceTransformer Pretrained Models: https://docs.google.com/spreadsheets/d/14QplCdTCDwEmTqrn1LH4yrbKvdogK4oQvYO1K1aPR5M/edit#gid=0
 8. BERT：用于语义理解的深度双向预训练转换器（Transformer）: https://carrylaw.github.io/anlp/2018/11/07/nlp14/
 9. DistilBERT: https://huggingface.co/transformers/model_doc/distilbert.html#distilbertmodel
+10. Is NLP actually advancing? Have we actually cracked the Linguistic learning with deep learning model: Turning-NLG by Microsoft.: https://medium.com/thecyphy/is-nlp-actually-advancing-a27173e7e9b1
