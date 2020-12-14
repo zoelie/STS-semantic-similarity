@@ -42,6 +42,31 @@ In this work, we denote the number of layers (i.e., Transformer blocks) as L, th
 
 As we can see, the overall structure of BERT is a stack of transformers, and each column of transformers has the same operation, which is the complete input of the sequence, so there is not much difference between BERT and transformers. In the following, we will look at the language model used in BERT and how some specific tasks are accomplished, which will inspire us to have more solutions in our algorithm development.
 
+__Model Performance: DistilBERT Testing:__
+
+The DistilBERT model was proposed in the article post Smaller, faster, cheaper, lighter: Introducing DistilBERT, a distilled version of BERT, and the paper DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. DistilBERT is a small, fast, cheap and light Transformer model trained by distilling BERT base. It has 40% less parameters than bert-base-uncased, runs 60% faster while preserving over 95% of BERT’s performances as measured on the GLUE language understanding benchmark.
+
+We have read several articles comparing the performance of DistilBERT on the development set of the GLUE benchmark with the performance of two baseline models. The BERT base (DistilBERT's faculty model) and a strong non-transferer baseline model from New York University: ELMo + BiLSTMs.The researchers used the ELMo baseline jiant library published by New York University and the PyTorch-Transformers version of the BERT baseline model.
+
+As shown in the table below, DistilBERT does not perform badly with 1/2 and 1/3 of the number of parameters of the baseline model. On nine tasks, DistilBERT's performance is generally equal to or better than the ELMo baseline (14 percentage points more accurate on the QNLI task). We can see that DistilBERT's performance is comparable to BERT: with 40% fewer parameters than BERT, it achieves 95% of the latter's accuracy.
+
+- MNLI (Multi-Genre Natural Language Inference): Given a pair of sentences, the goal is to predict whether the second sentence and the first sentence are related, unrelated, or contradictory.
+ 
+- QQP (Quora Question Pairs): Determines whether two questions have the same meaning. 
+
+- QNLI (Question Natural Language Inference): The sample is (question, sentence) whether or not the sentence is the answer to the question in a piece of text. 
+
+- STS-B (Semantic Textual Similarity Benchmark): Given a pair of sentences, evaluate the degree of semantic similarity between them on a scale of 1 to 5. 
+
+- MRPC (Microsoft Research Paraphrase Corpus): Sentence pairs are derived from comments on the same news article. Determine if the sentence pairs are semantically identical. 
+
+- RTE (Recognizing Textual Entailment): A binary classification problem, similar to MNLI, but with much fewer data. 
+
+- SST-2 (The Stanford Sentiment Treebank): Single-sentence binary classification problem, where the sentence is derived from people's evaluation of a movie, to determine the sentiment of the sentence. 
+
+- CoLA (The Corpus of Linguistic Acceptability): One-sentence binary classification problem, judging whether an English sentence is grammatically acceptable. 
+
+![COMPARISON](dylan-zhang-sentence-embedding/comparison.png)
 
 
 ### Roberta
@@ -134,3 +159,4 @@ over a wide range).
 6. Universal Sentence Encoder: https://arxiv.org/pdf/1803.11175.pdf
 7. SentenceTransformer Pretrained Models: https://docs.google.com/spreadsheets/d/14QplCdTCDwEmTqrn1LH4yrbKvdogK4oQvYO1K1aPR5M/edit#gid=0
 8. BERT：用于语义理解的深度双向预训练转换器（Transformer）: https://carrylaw.github.io/anlp/2018/11/07/nlp14/
+9. DistilBERT: https://huggingface.co/transformers/model_doc/distilbert.html#distilbertmodel
