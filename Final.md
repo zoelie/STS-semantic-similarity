@@ -76,7 +76,7 @@ From the results in the table above, it can be seen that DistilBERT is 60% faste
 
 To further test the speed-up/size trade-off of DistilBERT, we decided to use the DistilBERT model on the STS-B development set as part of the project.
 
-### Roberta
+### InferSent
 
 ### Universal Sentence Encoders
 
@@ -163,13 +163,22 @@ over a wide range).
 
 ![Pearsons Formula](report_images/pearsons_formula.png)
 
+Each analysis technique along with their respective Pearson's Correlation Coefficient value is listed in the table below. We have multiplied the Pearson's Correleation Coefficient by 100 for better readability.
+
+| Analysis Technique | Pearson's Correlation Coefficient |
+|      :---:         |               :---:               |
+| BERT | ___ |
+| InferSent | 72.37 |
+| Universal Sentence Encoders | ___ |
+| ___ | ___ |
+
 ## Conclusion
 
 
 ## Citation
 1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
 2. BERT: https://keras.io/examples/nlp/semantic_similarity_with_bert/
-3. Cosine Similarity: https://en.wikipedia.org/wiki/Cosine_similarity#:~:text=In%20the%20case%20of%20information,be%20greater%20than%2090%C2%B0.
+3. Cosine Similarity: https://en.wikipedia.org/wiki/Cosine_similarity
 4. Pearsons Correlation: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 5. CBOW and Skipgram Diagrams: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
 6. Universal Sentence Encoder: https://arxiv.org/pdf/1803.11175.pdf
@@ -178,3 +187,4 @@ over a wide range).
 9. DistilBERT: https://huggingface.co/transformers/model_doc/distilbert.html#distilbertmodel
 10. Is NLP actually advancing? Have we actually cracked the Linguistic learning with deep learning model: Turning-NLG by Microsoft.: https://medium.com/thecyphy/is-nlp-actually-advancing-a27173e7e9b1
 11. NLTK: https://www.nltk.org/book/ch01.html#fig-tally
+12. InferSent: https://github.com/facebookresearch/InferSent
