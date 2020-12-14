@@ -125,6 +125,13 @@ sentences such as "A man is playing a large flute" are similar to "Three men are
 
 ![Sent2Vec Heatmap](sonia-mannan-sentence-embeddings-results/sample_heatmap.png)
 
+### Natural Language Toolkit - analysis
+
+We were analyzing a number of the most frequent words by using NTLK this time. One of the reasons we wanted to do was find the top 15 most frequent words in the training dataset and see if there were particular keywords. We can also use the result to suppose or predict what the next word is in the sentence.
+
+![STRUCTURE](dylan-zhang-sentence-embedding/word_frequency.png)
+
+
 
 ## Comparisons:
 
@@ -168,3 +175,4 @@ over a wide range).
 8. BERT：用于语义理解的深度双向预训练转换器（Transformer）: https://carrylaw.github.io/anlp/2018/11/07/nlp14/
 9. DistilBERT: https://huggingface.co/transformers/model_doc/distilbert.html#distilbertmodel
 10. Is NLP actually advancing? Have we actually cracked the Linguistic learning with deep learning model: Turning-NLG by Microsoft.: https://medium.com/thecyphy/is-nlp-actually-advancing-a27173e7e9b1
+11. NLTK: https://www.nltk.org/book/ch01.html#fig-tally
