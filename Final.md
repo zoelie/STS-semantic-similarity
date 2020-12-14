@@ -4,7 +4,7 @@
 - Zoe Lie - zoelie
 - Sonia Mannan - smannan
 - Poojitha Vaddey - poojithavaddey
-- Dylan Zhang
+- Dylan Zhang - ddyy814
 
 ## Abstract
 
@@ -34,7 +34,7 @@ From this we discovered the headlines clustered into common news topics such as:
 
 BERT is not too new in terms of model structure and can achieve good results, mainly due to the robust feature extractor Transformer and the two self-supervised language models, which is the beginning of ImageNet in the field of NLP. Use a small number of specialized field forecasts to fine-tune and thus achieve objective results.
 
-
+![STRUCTURE](dylan-zhang-sentence-embedding/the_structure_of_BERT.png)
 
 ### Roberta
 
