@@ -64,6 +64,15 @@ over a wide range).
 
 ![Pearsons Formula](report_images/pearsons_formula.png)
 
+Each analysis technique along with their respective Pearson's Correlation Coefficient value is listed in the table below. We have multiplied the Pearson's Correleation Coefficient by 100 for better readability.
+
+| Analysis Technique | Pearson's Correlation Coefficient |
+|      :---:         |               :---:               |
+| BERT | ___ |
+| InferSent | 72.37 |
+| Universal Sentence Encoders | ___ |
+| ___ | ___ |
+
 ## Conclusion
 
 
@@ -71,5 +80,5 @@ over a wide range).
 1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
 2. BERT: https://keras.io/examples/nlp/semantic_similarity_with_bert/
 3. InferSent: https://github.com/facebookresearch/InferSent
-4. Cosine Similarity: https://en.wikipedia.org/wiki/Cosine_similarity#:~:text=In%20the%20case%20of%20information,be%20greater%20than%2090%C2%B0
+4. Cosine Similarity: https://en.wikipedia.org/wiki/Cosine_similarity
 5. Pearsons Correlation: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
