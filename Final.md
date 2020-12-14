@@ -34,7 +34,15 @@ From this we discovered the headlines clustered into common news topics such as:
 
 BERT is not too new in terms of model structure and can achieve good results, mainly due to the robust feature extractor Transformer and the two self-supervised language models, which is the beginning of ImageNet in the field of NLP. Use a small number of specialized field forecasts to fine-tune and thus achieve objective results.
 
+In this work, we denote the number of layers (i.e., Transformer blocks) as L, the size of hidden as H, and the number of self-attention heads as A. In all cases, the size of the feed-forward/filter is set to 4H, i.e., 3072 if H = 768. The paper reports results for two model sizes.
+
+  __BERT_BASE: L=12, H=768, A=12, Total Parameters=110M__ <br/> __BERT_LARGE: L=24, H=1024, A=16, Total Parameters=340M__
+
 ![STRUCTURE](dylan-zhang-sentence-embedding/the_structure_of_BERT.png)
+
+As we can see, the overall structure of BERT is a stack of transformers, and each column of transformers has the same operation, which is the complete input of the sequence, so there is not much difference between BERT and transformers. In the following, we will look at the language model used in BERT and how some specific tasks are accomplished, which will inspire us to have more solutions in our algorithm development.
+
+
 
 ### Roberta
 
@@ -125,3 +133,4 @@ over a wide range).
 5. CBOW and Skipgram Diagrams: https://towardsdatascience.com/introduction-to-word-embedding-and-word2vec-652d0c2060fa
 6. Universal Sentence Encoder: https://arxiv.org/pdf/1803.11175.pdf
 7. SentenceTransformer Pretrained Models: https://docs.google.com/spreadsheets/d/14QplCdTCDwEmTqrn1LH4yrbKvdogK4oQvYO1K1aPR5M/edit#gid=0
+8. BERT：用于语义理解的深度双向预训练转换器（Transformer）: https://carrylaw.github.io/anlp/2018/11/07/nlp14/
