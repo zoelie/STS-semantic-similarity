@@ -18,7 +18,15 @@ for new posts to view on a social media platform.
 Text must be preprocessed into numerical vectors before analyzing because most algorithms cannot work with text
 data firsthand. Once processed the numerical vectors can be scored and compared to a baseline similarity determined
 by human readers for evaluation. Our team used the STS Benchmark dataset comprised of thousands of news headline
-article pairs, scored by human readers for similarity.
+article pairs, scored by human readers for similarity. We applied various preprocessing techniques including: BERT,
+Infosert, and Sent2Vec to convert text data into numerica vectors, scored similarity between sentence pairs using
+cosine distance, and evaluted our calculated similarities to the human reader's using Pearson's correlation coefficient.
+
+A higher correlation between calculated and actual scores indicates better performance of the preprocessing
+technique at representing the sentences. In addition to determining similarities within article headlines our team also wanted
+to cluster the headlines to see if any apparent patterns or topics arose. We used the highest scoring preprocessing
+technique to prepare the documents and applied k-means clustering, then looked at individual clusters to determine topics.
+From this we discovered the headlines clustered into common news topics such as: Foreign Affairs, Military, Dogs, and Finance.
 
 ## Experiments/Analysis
 
