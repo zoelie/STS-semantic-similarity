@@ -32,6 +32,8 @@ From this we discovered the headlines clustered into common news topics such as:
 
 ### BERT
 
+![CHART](dylan-zhang-sentence-embedding/chart.png)
+
 The part of DistilBert's code is taken from Facebook XLM code, and part of the code is taken from Google AI BERT's Hugging Face PyTorch version. This code is available in the NLP library for Hugging Face, and NLP library also contains training and fine-tuned versions of DistilBert and its reproduction code.
 
 BERT is not too new in terms of model structure and can achieve good results, mainly due to the robust feature extractor Transformer and the two self-supervised language models, which is the beginning of ImageNet in the field of NLP. Use a small number of specialized field forecasts to fine-tune and thus achieve objective results.
@@ -52,6 +54,8 @@ We have read several articles comparing the performance of DistilBERT on the dev
 
 As shown in the table below, DistilBERT does not perform badly with 1/2 and 1/3 of the number of parameters of the baseline model. On nine tasks, DistilBERT's performance is generally equal to or better than the ELMo baseline (14 percentage points more accurate on the QNLI task). We can see that DistilBERT's performance is comparable to BERT: with 40% fewer parameters than BERT, it achieves 95% of the latter's accuracy.
 
+![COMPARISON](dylan-zhang-sentence-embedding/comparison.png)
+
 - MNLI (Multi-Genre Natural Language Inference): Given a pair of sentences, the goal is to predict whether the second sentence and the first sentence are related, unrelated, or contradictory.
  
 - QQP (Quora Question Pairs): Determines whether two questions have the same meaning. 
@@ -67,8 +71,6 @@ As shown in the table below, DistilBERT does not perform badly with 1/2 and 1/3 
 - SST-2 (The Stanford Sentiment Treebank): Single-sentence binary classification problem, where the sentence is derived from people's evaluation of a movie, to determine the sentiment of the sentence. 
 
 - CoLA (The Corpus of Linguistic Acceptability): One-sentence binary classification problem, judging whether an English sentence is grammatically acceptable. 
-
-![COMPARISON](dylan-zhang-sentence-embedding/comparison.png)
 
 From the results in the table above, it can be seen that DistilBERT is 60% faster and smaller than BERT, and DistilBERT is 120% faster and much smaller than ELMo+BiLSTM.
 
