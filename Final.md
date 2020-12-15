@@ -301,6 +301,9 @@ Install Python 3, Pytorch, and NLTK.
 Make sure that you have internet connection, as you will need to download the InferSent2 model and fastText embeddings.
 Modify the `cur_dir`, `path_train`, and `path_test` variables so that they reference the directory of the dataset and the file paths to the training and testing csv files. It is recommended to use GPU for faster sentence encoding speeds.
 
+__DistilBERT:__
+To run the DistiBERT model, either Colab or Jypter notebook with Python3 platform is acceptable. If you want to analyze word frequency, you have to install nltk package or run “ntlk.download()” in the editor. Load BERT model from PyPI.org and model name is “distilbert-base-nli-mean-tokens” (or you can find other BERT models from our reference link, which name is “SentenceTransformer Pretrained Models”). Finally, you can run this code either on CPU or GPU. If you use CPU to run, it will take around 5 mins. I recommended use GPU.
+
 __Universal Sentence Encoders:__
 
 
