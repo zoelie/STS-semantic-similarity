@@ -299,7 +299,7 @@ __InferSent:__
 To run the InferSent notebook, make sure to download the `models.py` file that is included in the repository in addition to the STS benchmark dataset.
 Install Python 3, Pytorch, and NLTK. 
 Make sure that you have internet connection, as you will need to download the InferSent2 model and fastText embeddings.
-Modify the `cur_dir`, `path_train`, and `path_test` variables so that they reference the directory of the dataset and the file paths to the training and testing sets.
+Modify the `cur_dir`, `path_train`, and `path_test` variables so that they reference the directory of the dataset and the file paths to the training and testing csv files. It is recommended to use GPU for faster sentence encoding speeds.
 
 __Universal Sentence Encoders:__
 
