@@ -287,6 +287,25 @@ Each analysis technique along with their respective Pearson's Correlation Coeffi
 ## Conclusion
 
 
+## Code Documentation
+Here are the dependencies and instructions for how to run the code.
+
+Download the STS benchmark dataset from http://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark and extract the files.
+
+__BERT__:
+
+
+__InferSent:__
+To run the InferSent notebook, make sure to download the `models.py` file that is included in the repository in addition to the STS benchmark dataset.
+Install Python 3, Pytorch, and NLTK. 
+Make sure that you have internet connection, as you will need to download the InferSent2 model and fastText embeddings.
+Modify the `cur_dir`, `path_train`, and `path_test` variables so that they reference the directory of the dataset and the file paths to the training and testing sets.
+
+__Universal Sentence Encoders:__
+
+
+__:__
+
 ## Citation
 1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
 2. BERT: https://keras.io/examples/nlp/semantic_similarity_with_bert/
