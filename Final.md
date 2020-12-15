@@ -239,7 +239,7 @@ Each analysis technique along with their respective Pearson's Correlation Coeffi
 
 | Analysis Technique | Pearson's Correlation Coefficient |
 |      :---:         |               :---:               |
-| BERT | ___ |
+| BERT | 77.1 |
 | InferSent | 72.37 |
 | Universal Sentence Encoders | 77.85 |
 | ___ | ___ |
