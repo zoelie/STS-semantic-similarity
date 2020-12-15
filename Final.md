@@ -98,6 +98,8 @@ To further test the speed-up/size trade-off of DistilBERT, we decided to use the
 
 ### InferSent
 
+
+
 ### Universal Sentence Encoders
 
 There are a variety of methods to preprocess text such as Bag of Words and TF-IDF but so far these methods have failed to
@@ -259,4 +261,7 @@ Each analysis technique along with their respective Pearson's Correlation Coeffi
 9. DistilBERT: https://huggingface.co/transformers/model_doc/distilbert.html#distilbertmodel
 10. Is NLP actually advancing? Have we actually cracked the Linguistic learning with deep learning model: Turning-NLG by Microsoft.: https://medium.com/thecyphy/is-nlp-actually-advancing-a27173e7e9b1
 11. NLTK: https://www.nltk.org/book/ch01.html#fig-tally
-12. InferSent: https://github.com/facebookresearch/InferSent
+12. InferSent pre-trained models: https://github.com/facebookresearch/InferSent 
+13. Supervised Learning of Universal Sentence Representations from Natural Language Inference Data https://arxiv.org/pdf/1705.02364.pdf 
+14. GloVe and fastText: https://dzone.com/articles/glove-and-fasttext-two-popular-word-vector-models
+15. InferSent architecture diagram: https://medium.com/analytics-vidhya/sentence-embeddings-facebooks-infersent-6ac4a9fc2001 
