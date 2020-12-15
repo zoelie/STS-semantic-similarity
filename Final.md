@@ -98,7 +98,17 @@ To further test the speed-up/size trade-off of DistilBERT, we decided to use the
 
 ### InferSent
 
+InferSent is a sentence embeddings method developed by Facebook and provides semantic representations for sentences. There are two main parts of the InferSent architecture: the sentence encoder and the NLI (natural language inference) classifier. The figure below illustrates the architecture of InferSent.
 
+![InferSent Architecture](report_images/InferSent_architecture.png)
+
+For the sentence encoder, the researchers found that a BiLSTM max-pooling worked the best. The architecture of this network is shown in the diagram below. The BiLSTM network takes word vectors as inputs and computes n-vectors for n-words, where each vector is produced by concatenating the output of a forward LSTM, which reads sentences in the normal direction, and the output from a backward LSTM, which reads sentences in the opposite direction. After the vectors are produced, a max-pooling layer is applied to each vector to produce the final vector of sentence embeddings.
+
+![BiLSTM max-pooling network](report_images/BiLSTM_maxpooling.jpg)
+
+The NLI classifier takes sentence embedding vectors as inputs and produces output labels. The model applies three methods to extract relations between the text, u, and the prediction v. Then, it applies a 3-class classifier that is made of fully-connected layers and a softmax layer. This process is shown in the diagram below.
+
+![NLI classifier](report_images/NLI_classifier.jpg)
 
 ### Universal Sentence Encoders
 
