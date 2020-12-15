@@ -28,6 +28,26 @@ to cluster the headlines to see if any apparent patterns or topics arose. We use
 technique to prepare the documents and applied k-means clustering, then looked at individual clusters to determine topics.
 From this we discovered the headlines clustered into common news topics such as: Foreign Affairs, Military, Dogs, and Finance.
 
+## Background
+
+Two key calculations used to evaluate model performance are cosine similarity and pearson's correlation.
+
+Cosine similarity measures the cosine of the angle between two vectors and is a good distance measure for comparing
+documents that are different sizes. It is calculated by taking the dot product between the vectors and dividing by
+their magnitudes (see formula below). Cosine similarities can range between 0-1, where more similar documents will
+have a score of 1.
+
+![Cosine Similarity Formula](report_images/cosine_sim_formula.png)
+
+Pearson's Correlation measures the linear correlation between two variables from -1 to 1, with 1 being complete positive
+correlation, 0 being no correlation, and -1 being complete negative correlation. It's calculated by dividing the covariance
+between the two variables, divided by their standard deviation (see formula below). Covariance measures the joint variability
+between two variables (if they behave the same it is positive and otherwise negative) while standard deviation measures
+the dispersion in a dataset (low standard deviation means values are all close to the mean, higher means they are spread out
+over a wide range).
+
+![Pearsons Formula](report_images/pearsons_formula.png)
+
 ## Experiments/Analysis
 
 ### BERT
@@ -133,6 +153,74 @@ We were analyzing a number of the most frequent words by using NTLK this time. O
 
 ![STRUCTURE](dylan-zhang-sentence-embedding/word_frequency1.png)
 
+### K-means Clustering
+
+In addition to developing models that can determing how similar two sentences are, we also wanted to cluster news article headlines to
+investigate if any apparent topics arose. We used K-means clustering to do this, which is an unsupervised clustering method that
+places similar observations in the same cluster based on distance to the cluster's mean. K-means requires numerical data to work with
+so in order to cluster the article headlines, the pre-processing techniques in Part I were used as features for this model.
+
+K-means places observations into a fixed amount of clusters so choosing the right number of clusters is key. It has to be small enough
+such that the clusters are meaningful but large enough such that the clusters are distinct. We used the elbow method and WCSS to
+estimate the number of clusters. WCSS or Within cluser sum of squares is the sum of observation distances from the mean. A small WCSS indicates
+cohesive observations in the same cluster, close to their cluster mean. There is a diminishing return on WCSS as cluster size increases.
+When there are no longer significant decreases in WCSS, the optimal number of clusters has been found. Based on the chart below, our elbow
+was wide and we ended up choosing 20 clusters.
+
+![Elbow Method](sonia-mannan-sentence-embeddings-results/kmeans_cluster_elbow.png)
+
+K-means is an unsupervised method but because the sentences used came in pairs scored by humans for similarities, we tried evaluating the
+performance of our algorithm by calculating the percent of pairs in the same cluster for each similarity score (0-5). The idea being that
+as similarity increases the % of pairs in the same cluster should also increase.
+
+![K-means Evalutation](sonia-mannan-sentence-embeddings-results/kmeans_cluster_evaluation.png)
+
+After clustering the article headlines into 20 clusters we inspected sentences in each one to determine if there was a cohesive topic.
+We found 15 of the 20 clusters has non-ambiguous themes common to news articles such as: Syria, News About the Middle East, Dogs, Foreign Events, Cooking, Women, Men, Israel and Palestine, Finance, Music, Military, Crime, Cats.
+
+For example, some of the topics we discovered and the article titles in each topic:
+
+Finance Articles:
+
+The bailout was bigger than TARP Bloomberg news.
+Scenario A assumes that the CO growth rate accelerates by .%/yr.
+Capital gains, top rate:  percent.
+If you want to buy $ billion in XYZ Inc. common stock, who cares?
+Capital gains, top rate:  percent.
+In afternoon trading in Europe, France's CAC-40 advanced and Britain's FTSE 100 each gained 0.7 percent, while Germany's DAX index rose 0.6 percent.
+Earlier this month, RIM had said it expected to report second-quarter earnings of between 7 cents and 11 cents a share.
+
+Syria Articles:
+
+Explosion hits oil pipeline in Syria's Homs
+Syria says suicide bomber kills 10 in Damascus
+Syrian rebels move command from Turkey to Syria
+Annan warns talks of Syria risks
+UN Security Council unanimous vote on Syria
+China news agency: Still hope for Syria peace
+U.S. and Turkey weigh no-fly zones for Syria
+
+Music Articles:
+
+A kid is playing guitar.
+A boy is playing guitar.
+A man is playing guitar.
+A little boy is playing a keyboard.
+A man is playing a guitar.
+A man is playing the guitar.
+A man is playing the drums.
+A man is playing the guitar and singing.
+
+Dog Articles:
+
+The puppy played with a blue tennis ball.
+A dog licks up a baby's drool.
+Two dogs swim in a pool.
+A dog is looking into swimming pool.
+A dog is barking at a ball.
+A dog sat at the counter of a store.
+A puppy is sliding backwards along the floor.
+A dog is looking into swimming pool.
 
 
 ## Comparisons:
@@ -147,29 +235,13 @@ Calculated scores were compared against real scores determined by human readers 
 measures the strength in correlation between two variables. Ideally calculated scores should be highly correlated to
 actual scores, so a higher Pearson's would indicate a better calculated score and pre-processing technique.
 
-Cosine similarity measures the cosine of the angle between two vectors and is a good distance measure for comparing
-documents that are different sizes. It is calculated by taking the dot product between the vectors and dividing by
-their magnitudes (see formula below). Cosine similarities can range between 0-1, where more similar documents will
-have a score of 1.
-
-![Cosine Similarity Formula](report_images/cosine_sim_formula.png)
-
-Pearson's Correlation measures the linear correlation between two variables from -1 to 1, with 1 being complete positive
-correlation, 0 being no correlation, and -1 being complete negative correlation. It's calculated by dividing the covariance
-between the two variables, divided by their standard deviation (see formula below). Covariance measures the joint variability
-between two variables (if they behave the same it is positive and otherwise negative) while standard deviation measures
-the dispersion in a dataset (low standard deviation means values are all close to the mean, higher means they are spread out
-over a wide range).
-
-![Pearsons Formula](report_images/pearsons_formula.png)
-
 Each analysis technique along with their respective Pearson's Correlation Coefficient value is listed in the table below. We have multiplied the Pearson's Correleation Coefficient by 100 for better readability.
 
 | Analysis Technique | Pearson's Correlation Coefficient |
 |      :---:         |               :---:               |
 | BERT | ___ |
 | InferSent | 72.37 |
-| Universal Sentence Encoders | ___ |
+| Universal Sentence Encoders | 77.85 |
 | ___ | ___ |
 
 ## Conclusion
