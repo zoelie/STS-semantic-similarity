@@ -136,6 +136,8 @@ An example of a word importance visualization graph is shown below.
 I used the sentences in the training set as vocabulary and created a visualization of a random sentence from the set "Mexico swears in president amid violent protests".
 As you can see from the visualization graph below, the model believes that the word "Mexico" has the highest importance, and the words "swears", "president", "violent", and "protests" are of moderate importance. 
 
+![InferSent word importance visualization graph](report_images/infersent_visualization_word_importance.png)
+
 ### Universal Sentence Encoders
 
 There are a variety of methods to preprocess text such as Bag of Words and TF-IDF but so far these methods have failed to
