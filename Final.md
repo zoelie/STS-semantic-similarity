@@ -118,6 +118,15 @@ This process is shown in the diagram below.
 
 ![NLI classifier](report_images/NLI_classifier.jpg)
 
+There are two InferSent models that are available: infersent1 and infersent2.
+The first model was trained with GloVe (Global Vectors) embeddings and text that has been preprocessed with the PTB tokenizer, and the second model was trained with fastText embeddings and text that has been preprocessed with the MOSES tokenizer.
+GloVe embeddings focus on global matrix factorization and local context window, and it takes the frequency distribution of words into account.
+fastText is an extension of the word2vec model and represents each word as an n-gram of characters.
+For example, for the word “sentence” and n=3, the fastText representation of would be <se, sen, ent, nte, enc, nce, ce>, where the brackets represent the beginning and ending of the word.
+This n-gram representation of words allows for embeddings to portray prefixes and suffixes of words.
+After preprocessing words into n-grams, a SkipGram model was trained to learn the resulting embeddings.
+The main advantage that fastText offers is that it works well with rare words since the embeddings of unfamiliar words are obtained by breaking the words into n-grams.
+
 ### Universal Sentence Encoders
 
 There are a variety of methods to preprocess text such as Bag of Words and TF-IDF but so far these methods have failed to
