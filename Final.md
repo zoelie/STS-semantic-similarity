@@ -128,6 +128,14 @@ This n-gram representation of words allows for embeddings to portray prefixes an
 After preprocessing words into n-grams, a SkipGram model was trained to learn the resulting embeddings.
 The main advantage that fastText offers is that it works well with rare words since the embeddings of unfamiliar words are obtained by breaking the words into n-grams.
 
+I used the infersent2 model withfastText embeddings, because of the main advantage that fastText works well with rare words and words that were not learned during training.
+To use infersent2, load the pre-trained model using pytorch and load the fastText embeddings.
+Then, build the vocabulary for the model from either a list of sentences using `build_vocab` or the K-most common words using `build_vocab_k_words`. The vocabulary is tokenized by default.
+To see visualizations of word importance, generate embeddings of the sentences using `encode`, then use the `visualize` method.
+An example of a word importance visualization graph is shown below.
+I used the sentences in the training set as vocabulary and created a visualization of a random sentence from the set "Mexico swears in president amid violent protests".
+As you can see from the visualization graph below, the model believes that the word "Mexico" has the highest importance, and the words "swears", "president", "violent", and "protests" are of moderate importance. 
+
 ### Universal Sentence Encoders
 
 There are a variety of methods to preprocess text such as Bag of Words and TF-IDF but so far these methods have failed to
