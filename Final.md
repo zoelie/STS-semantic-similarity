@@ -99,6 +99,7 @@ To further test the speed-up/size trade-off of DistilBERT, we decided to use the
 ### InferSent
 
 InferSent is a sentence embeddings method developed by Facebook and provides semantic representations for sentences.
+It is a supervised model that was trained on the Stanford Natural Language Inference dataset (SNLI), which is made of 570,000 sentence pairs that are labeled as “entailment”, “contradiction”, or “neutral”.
 There are two main parts of the InferSent architecture: the sentence encoder and the NLI (natural language inference) classifier.
 The figure below illustrates the architecture of InferSent.
 
