@@ -311,7 +311,7 @@ __Universal Sentence Encoders:__ To run this notebook you will need python3 and 
 matplotlib, numpy, pandas, nltk, scipy, sklearn, tensorflow, seaborn
 
 
-__:__
+__LSTM using Word2vec Embeddings:__
 
 ## Citation
 1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
