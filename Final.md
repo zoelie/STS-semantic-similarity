@@ -265,6 +265,35 @@ A dog sat at the counter of a store.
 A puppy is sliding backwards along the floor.
 A dog is looking into swimming pool.
 
+## LSTM using Word2Vec Embeddings
+
+### Word2Vec Embeddings
+We are using STS-Dataset for evalauting the sentence similarity. First step involves preprocessing the STS dataset,then we apply word2Vec embeddings to the cleaned data and convert them to an embedding matrix. We use the Google News embeddings in our model.
+
+Word2Vec was originally described as a neural network model using 2 layer network to perform dimensionality reduction. Word2Vec (W2V) is an algorithm that accepts text corpus as an input and outputs a vector representation for each word. The vectors we use to represent words are called neural word embeddings and they represent a word with continuous numbers. A neural word embedding represents a word with continuous numbers. Word2vec is similar to an autoencoder, encoding each word in a vector, but rather than training against the input words through reconstruction, word2vec on the other hand trains words against other words that neighbor them in the input corpus.
+
+![Embedding](poojitha_sentence_embeddings/embedding.png)
+
+### Model
+
+Long Short Term Memory networks – usually just called “LSTMs” – are a special kind of RNN, capable of learning long-term dependencies. LSTMs are explicitly designed to avoid the long-term dependency problem. LSTMs have a chain like structure, but the repeating module has a different structure.They are designed to have four neural network layers.
+
+The LSTM has the capability to delete or include information to the cell state which is regulated by structures called gates.Gates are a way to optionally let information through. They are composed out of a sigmoid neural net layer and a pointwise multiplication operation. The sigmoid layer outputs numbers between zero and one, describing how much of each component should be let through. A value of zero means “not let through,” while a value of one means “let through”.
+An LSTM has three of these gates, to protect and control the cell state.
+
+![lstm_architecture](poojitha_sentence_embeddings/lstm_architecture.png)
+
+In the model, there are two identical LSTM networks. LSTM is passed vector representations of sentences and output a hidden state encoding semantic meaning of the sentences. Subsequently, these hidden states are compared using some similarity mechanism to output a similarity score.
+LSTM network learns jointly a mapping from the space of variable length sequences to encode as a fixed dimensional hidden state representation. Similarities in the representation space are subsequently used to infer the sentences underlying semantic similarity. In this model the similarity technique used is: cosine similarity and Manhattan distance.
+
+![model_architecture](poojitha_sentence_embeddings/model_architecture.jpeg)
+
+The following plot shows how the validation and training loss varying for each epoch. As we train for more epochs, the RMSE value of training and validation datasets is decreasing
+![RMSE_graph](poojitha_sentence_embeddings/RMSE_graph.png)
+
+The following plot shows how the validation and training loss varying for each epoch. As we train for more epochs, the loss value of training and validation datasets is decreasing
+![Loss_graph](poojitha_sentence_embeddings/Loss_graph.png)
+
 
 ## Comparisons:
 
