@@ -285,18 +285,18 @@ Each analysis technique along with their respective Pearson's Correlation Coeffi
 | BERT | 77.1 |
 | InferSent | 72.37 |
 | Universal Sentence Encoders | 77.85 |
-| ___ | ___ |
+| LSTM using Word2vec Embeddings | 65.8 |
 
 ## Conclusion
 
+We used four different techniques to determine semantic similarity between sentences: BERT, InferSent, Universal Sentence Encoders, and LSTM using Word2vec Embeddings.
+The technique with the best performance was Universal Sentence Encoders, and the model with the worst performance was LSTM using Word2vec Embeddings.
+As an extension to the original objective, we implemented K-means using the numberical vectors from the semantic similarity analysis to generate clusters of sentences to investigate any common themes.
 
 ## Code Documentation
 Here are the dependencies and instructions for how to run the code.
 
 Download the STS benchmark dataset from http://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark and extract the files.
-
-__BERT__:
-
 
 __InferSent:__
 To run the InferSent notebook, make sure to download the `models.py` file that is included in the repository in addition to the STS benchmark dataset.
@@ -307,7 +307,8 @@ Modify the `cur_dir`, `path_train`, and `path_test` variables so that they refer
 __DistilBERT:__
 To run the DistiBERT model, either Colab or Jupyter notebook with Python3 platform is acceptable. If you want to analyze word frequency, you have to install nltk package or run “ntlk.download()” in the editor. Load BERT model from PyPI.org and model name is “distilbert-base-nli-mean-tokens” (or you can find other BERT models from our reference link, which name is “SentenceTransformer Pretrained Models”). Finally, you can run this code either on CPU or GPU. If you use CPU to run, it will take around 5 mins. I recommended use GPU to run for faster.
 
-__Universal Sentence Encoders:__
+__Universal Sentence Encoders:__ To run this notebook you will need python3 and jupyter notebook as well as the following dependencies:
+matplotlib, numpy, pandas, nltk, scipy, sklearn, tensorflow, seaborn
 
 
 __:__
