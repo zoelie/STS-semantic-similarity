@@ -185,6 +185,9 @@ sentences such as "A man is playing a large flute" are similar to "Three men are
 
 ![Sent2Vec Heatmap](sonia-mannan-sentence-embeddings-results/sample_heatmap.png)
 
+To run this notebook you will need python3 and jupyter notebook as well as the following dependencies:
+matplotlib, numpy, pandas, nltk, scipy, sklearn, tensorflow, seaborn
+
 ### Natural Language Toolkit - analysis
 
 We were analyzing a number of the most frequent words by using NTLK this time. One of the reasons we wanted to do was find the top 15 most frequent words in the training dataset and see if there were particular keywords. We can also use the result to suppose or predict what the next word is in the sentence.
