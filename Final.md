@@ -340,7 +340,9 @@ __Universal Sentence Encoders:__ To run this notebook you will need python3 and 
 matplotlib, numpy, pandas, nltk, scipy, sklearn, tensorflow, seaborn
 
 
-__LSTM using Word2vec Embeddings:__
+__LSTM using Word2vec Embeddings:__ To run this noebook, you will need python3, jupyternotebook and the following libraries for data processing in preliminary analysis and the model training.
+numpy, pandas, matplotlib, nltk, sklearn, tensorflow, seaborn, wordcloud, scipy, pycontractions, autocorrect, ekphrasis.classes.segmenter
+
 
 ## Citation
 1. Sentence Transformers: https://pypi.org/project/sentence-transformers/
